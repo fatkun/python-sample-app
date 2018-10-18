@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-print("outside")
-
-a = "test"
+astr = "UPPER"
 
 def init():
     print("init")
 
 def handler(event, context):
     print (event)
-    return "data =%s %s" % (a, event['data'])
+    return "data %s=%s" % (astr, event['data'].upper())
+    
