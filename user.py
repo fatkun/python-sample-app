@@ -8,5 +8,5 @@ def init():
 
 def handler(event, context):
     print (event)
-    return "data %s=%s" % (astr, event['data'].upper())
+    return "data %s=%s" % (astr, event.get("body").upper())
     
